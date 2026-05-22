@@ -1,18 +1,25 @@
 # Live donor and reconciliation data — never commit
-Fundraise_Reconciliation_Sheet.xlsx
+#
+# Patterns are anchored to root with a leading slash so they only match
+# files in the WORKING folder, not the synthetic copies under examples/.
+# The examples/ folder is committed intentionally — it is fully synthetic.
+
+/Fundraise_Reconciliation_Sheet.xlsx
+/payments_log.md
+/SESSION_CONTEXT.md
+/daily_updates/
+/bank_stmts/
+/archive/
+
+# Excel lock and temp files, anywhere in the tree
 ~$*.xlsx
 .~lock.*
-payments_log.md
-SESSION_CONTEXT.md
-daily_updates/
-bank_stmts/
-archive/
 
-# Date-named bank-statement folders (e.g. "20May", "21 May", "2026-05-22")
-[0-9][0-9]*May*/
-[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]/
+# Date-named bank-statement folders at root (e.g. "20May", "21 May", "2026-05-22")
+/[0-9][0-9]*May*/
+/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]/
 
-# Standalone bank statement PDFs
+# Standalone bank statement PDFs, anywhere in the tree
 *STMT*.pdf
 *statement*.pdf
 *epassbook*.pdf

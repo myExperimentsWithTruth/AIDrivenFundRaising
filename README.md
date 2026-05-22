@@ -32,6 +32,7 @@ The primary agent does the work; the audit agent never trusts it. The day only c
 | `templates/daily_update.template.md` | The shape of a daily donor message |
 | `templates/audit_report.template.md` | The shape of an audit pass / discrepancy report |
 | `templates/Excel_workbook_structure.md` | Sheet-by-sheet specification of the reconciliation workbook |
+| `examples/` | Synthetic end-to-end snapshot — fake workbook with 10 contributors, a daily message, an audit report, and a session-context file — so you can visualise the workflow before adapting it |
 
 ## How to use this
 
