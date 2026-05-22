@@ -8,6 +8,18 @@ This repo packages the operating manual, the architecture, the diagrams, and a C
 
 The story behind it is in [`blog.md`](./blog.md).
 
+## Architecture at a glance
+
+Three layers — raw evidence flows in, the Excel workbook reconciles, publications come out. Only the middle layer is ever touched, and only through the procedures.
+
+![Three-layer architecture for fundraise reconciliation](./diagrams/architecture.svg)
+
+## Daily cycle at a glance
+
+The primary agent does the work; the audit agent never trusts it. The day only closes if every gate passes — verification, audit APPROVED, strict-verify on send, Audit_Log entry, AI-disclosure footer. A discrepancy loops back; nothing is hand-fixed silently.
+
+![Daily reconciliation cycle with the audit gate](./diagrams/solution_daily_cycle.svg)
+
 ## What's in here
 
 | Path | What it is |
