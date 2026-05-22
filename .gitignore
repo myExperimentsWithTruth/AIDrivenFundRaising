@@ -1,0 +1,31 @@
+# Live donor and reconciliation data — never commit
+Fundraise_Reconciliation_Sheet.xlsx
+~$*.xlsx
+.~lock.*
+payments_log.md
+SESSION_CONTEXT.md
+daily_updates/
+bank_stmts/
+archive/
+
+# Date-named bank-statement folders (e.g. "20May", "21 May", "2026-05-22")
+[0-9][0-9]*May*/
+[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]/
+
+# Standalone bank statement PDFs
+*STMT*.pdf
+*statement*.pdf
+*epassbook*.pdf
+
+# OS / editor
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Python (if any helper scripts are added later)
+__pycache__/
+*.pyc
+.venv/
+venv/

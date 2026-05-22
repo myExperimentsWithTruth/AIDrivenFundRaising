@@ -1,0 +1,83 @@
+<svg viewBox="0 0 1000 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="sol-t sol-d">
+  <title id="sol-t">Daily reconciliation cycle</title>
+  <desc id="sol-d">Inputs flow through the primary agent into Excel; the audit agent independently verifies before send.</desc>
+
+  <defs>
+    <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#57534e"/>
+    </marker>
+    <marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#15803d"/>
+    </marker>
+    <marker id="arrf" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#b91c1c"/>
+    </marker>
+  </defs>
+
+  <text x="500" y="28" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="#1c1917" text-anchor="middle">Daily reconciliation cycle</text>
+  <text x="500" y="48" font-family="Inter, sans-serif" font-size="12" fill="#78716c" text-anchor="middle">Primary agent does the work. Audit agent never trusts it.</text>
+
+  <text x="100" y="86" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#78716c" text-anchor="middle" letter-spacing="1">INPUTS</text>
+  <rect x="30" y="100" width="140" height="50" fill="#ffffff" stroke="#d6d3d1" rx="4"/>
+  <text x="100" y="122" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#1c1917" text-anchor="middle">Donor screenshot</text>
+  <text x="100" y="138" font-family="Inter, sans-serif" font-size="11" fill="#78716c" text-anchor="middle">WhatsApp / SMS</text>
+
+  <rect x="30" y="160" width="140" height="50" fill="#ffffff" stroke="#d6d3d1" rx="4"/>
+  <text x="100" y="182" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#1c1917" text-anchor="middle">Bank statement</text>
+  <text x="100" y="198" font-family="Inter, sans-serif" font-size="11" fill="#78716c" text-anchor="middle">PDF</text>
+
+  <line x1="170" y1="155" x2="210" y2="155" stroke="#57534e" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+  <text x="290" y="86" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#78716c" text-anchor="middle" letter-spacing="1">PRIMARY AGENT</text>
+  <rect x="215" y="100" width="150" height="110" fill="#ffffff" stroke="#1c1917" stroke-width="1.5" rx="4"/>
+  <text x="290" y="124" font-family="Menlo, monospace" font-size="12" font-weight="600" fill="#1c1917" text-anchor="middle">fundraise-recon</text>
+  <text x="290" y="148" font-family="Inter, sans-serif" font-size="11" fill="#57534e" text-anchor="middle">Loads SOP</text>
+  <text x="290" y="166" font-family="Inter, sans-serif" font-size="11" fill="#57534e" text-anchor="middle">Asks before assume</text>
+  <text x="290" y="184" font-family="Inter, sans-serif" font-size="11" fill="#57534e" text-anchor="middle">Runs procedures §8</text>
+  <text x="290" y="202" font-family="Inter, sans-serif" font-size="11" fill="#57534e" text-anchor="middle">Generates message</text>
+
+  <line x1="365" y1="155" x2="405" y2="155" stroke="#57534e" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+  <text x="485" y="86" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#92400e" text-anchor="middle" letter-spacing="1">SOURCE OF TRUTH</text>
+  <rect x="410" y="100" width="150" height="110" fill="#fef3c7" stroke="#fbbf24" stroke-width="1.5" rx="4"/>
+  <text x="485" y="124" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#92400e" text-anchor="middle">Excel workbook</text>
+  <text x="485" y="148" font-family="Inter, sans-serif" font-size="11" fill="#92400e" text-anchor="middle">Master_List</text>
+  <text x="485" y="166" font-family="Inter, sans-serif" font-size="11" fill="#92400e" text-anchor="middle">Bank sheets</text>
+  <text x="485" y="184" font-family="Inter, sans-serif" font-size="11" fill="#92400e" text-anchor="middle">Dashboard</text>
+  <text x="485" y="202" font-family="Inter, sans-serif" font-size="11" fill="#92400e" text-anchor="middle">Audit_Log</text>
+
+  <line x1="560" y1="155" x2="600" y2="155" stroke="#57534e" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+  <text x="680" y="86" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#78716c" text-anchor="middle" letter-spacing="1">AUDIT AGENT</text>
+  <rect x="605" y="100" width="150" height="110" fill="#ffffff" stroke="#1c1917" stroke-width="1.5" stroke-dasharray="4 3" rx="4"/>
+  <text x="680" y="124" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#1c1917" text-anchor="middle">Independent pass</text>
+  <text x="680" y="148" font-family="Inter, sans-serif" font-size="11" fill="#57534e" text-anchor="middle">Re-reads SOP</text>
+  <text x="680" y="166" font-family="Inter, sans-serif" font-size="11" fill="#57534e" text-anchor="middle">Re-reads PDFs</text>
+  <text x="680" y="184" font-family="Inter, sans-serif" font-size="11" fill="#57534e" text-anchor="middle">Re-derives totals</text>
+  <text x="680" y="202" font-family="Inter, sans-serif" font-size="11" fill="#57534e" text-anchor="middle">Never edits</text>
+
+  <line x1="755" y1="155" x2="795" y2="155" stroke="#15803d" stroke-width="1.5" marker-end="url(#arrg)"/>
+  <text x="775" y="146" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#15803d" text-anchor="middle">APPROVED</text>
+
+  <text x="885" y="86" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#78716c" text-anchor="middle" letter-spacing="1">DISTRIBUTION</text>
+  <rect x="800" y="100" width="170" height="110" fill="#ffffff" stroke="#d6d3d1" rx="4"/>
+  <text x="885" y="124" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#1c1917" text-anchor="middle">WhatsApp send</text>
+  <text x="885" y="148" font-family="Inter, sans-serif" font-size="11" fill="#57534e" text-anchor="middle">wa.me deep-links</text>
+  <text x="885" y="166" font-family="Inter, sans-serif" font-size="11" fill="#57534e" text-anchor="middle">Header strict-verify</text>
+  <text x="885" y="184" font-family="Inter, sans-serif" font-size="11" fill="#57534e" text-anchor="middle">86 recipients</text>
+  <text x="885" y="202" font-family="Inter, sans-serif" font-size="11" fill="#57534e" text-anchor="middle">~10 minutes</text>
+
+  <path d="M 680 210 L 680 260 L 290 260 L 290 210" fill="none" stroke="#b91c1c" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrf)"/>
+  <rect x="430" y="248" width="120" height="22" fill="#ffffff" stroke="#b91c1c" rx="3"/>
+  <text x="490" y="263" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#b91c1c" text-anchor="middle">DISCREPANCY → fix</text>
+
+  <rect x="30" y="310" width="940" height="190" fill="#fafaf9" stroke="#e7e5e4" rx="6"/>
+  <text x="50" y="335" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#78716c" letter-spacing="1">GATES THE DAY MUST PASS THROUGH</text>
+
+  <text x="50" y="362" font-family="Inter, sans-serif" font-size="12" fill="#1c1917">1. Verification §8.1 — headline matches sum of line items, matches Excel totals, no rounded shortcuts.</text>
+  <text x="50" y="384" font-family="Inter, sans-serif" font-size="12" fill="#1c1917">2. Audit §9.2 — independent re-derivation must APPROVE before the message can be sent.</text>
+  <text x="50" y="406" font-family="Inter, sans-serif" font-size="12" fill="#1c1917">3. Strict-verify on send — every chat header must contain all distinct name tokens of the recipient.</text>
+  <text x="50" y="428" font-family="Inter, sans-serif" font-size="12" fill="#1c1917">4. Audit_Log entry written for every change and every send. Append-only.</text>
+  <text x="50" y="450" font-family="Inter, sans-serif" font-size="12" fill="#1c1917">5. AI-disclosure footer on every public message — recipients are invited to flag any mistake they see.</text>
+  <text x="50" y="478" font-family="Inter, sans-serif" font-size="11" fill="#78716c" font-style="italic">If any gate fails, the day does not close. Fixes loop back to the primary agent and the audit re-runs.</text>
+</svg>

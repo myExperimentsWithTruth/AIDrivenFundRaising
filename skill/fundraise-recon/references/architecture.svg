@@ -1,0 +1,69 @@
+<svg viewBox="0 0 900 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="arch-t arch-d">
+  <title id="arch-t">Three-layer architecture for fundraise reconciliation</title>
+  <desc id="arch-d">Raw evidence in Layer 1 feeds the Excel workbook in Layer 2, which generates publications in Layer 3.</desc>
+
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#57534e"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="28" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="#1c1917" text-anchor="middle">Three-layer architecture</text>
+  <text x="450" y="48" font-family="Inter, sans-serif" font-size="12" fill="#78716c" text-anchor="middle">Evidence in. Workbook reconciles. Publications out.</text>
+
+  <rect x="40" y="70" width="820" height="86" fill="#fafaf9" stroke="#e7e5e4" rx="6"/>
+  <text x="60" y="92" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#78716c" letter-spacing="1">LAYER 1 — RAW EVIDENCE (READ-ONLY)</text>
+
+  <rect x="60" y="104" width="380" height="42" fill="#ffffff" stroke="#d6d3d1" rx="4"/>
+  <text x="76" y="124" font-family="Menlo, monospace" font-size="13" font-weight="600" fill="#1c1917">payments_log.md</text>
+  <text x="76" y="140" font-family="Inter, sans-serif" font-size="11" fill="#78716c">donor screenshots, SMS, claims</text>
+
+  <rect x="460" y="104" width="380" height="42" fill="#ffffff" stroke="#d6d3d1" rx="4"/>
+  <text x="476" y="124" font-family="Menlo, monospace" font-size="13" font-weight="600" fill="#1c1917">bank_stmts/&lt;date&gt;/*.pdf</text>
+  <text x="476" y="140" font-family="Inter, sans-serif" font-size="11" fill="#78716c">original bank statements</text>
+
+  <line x1="250" y1="156" x2="250" y2="186" stroke="#57534e" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="650" y1="156" x2="650" y2="186" stroke="#57534e" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="40" y="196" width="820" height="210" fill="#fef3c7" stroke="#fbbf24" stroke-width="1.5" rx="6"/>
+  <text x="60" y="218" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#92400e" letter-spacing="1">LAYER 2 — SOURCE OF TRUTH (Fundraise_Reconciliation_Sheet.xlsx)</text>
+
+  <rect x="60" y="232" width="250" height="50" fill="#ffffff" stroke="#d6d3d1" rx="4"/>
+  <text x="76" y="252" font-family="Menlo, monospace" font-size="13" font-weight="600" fill="#1c1917">Bank sheets</text>
+  <text x="76" y="269" font-family="Inter, sans-serif" font-size="11" fill="#78716c">1:1 mirror of bank PDFs</text>
+
+  <rect x="325" y="232" width="250" height="50" fill="#ffffff" stroke="#d6d3d1" rx="4"/>
+  <text x="341" y="252" font-family="Menlo, monospace" font-size="13" font-weight="600" fill="#1c1917">Holding_Account</text>
+  <text x="341" y="269" font-family="Inter, sans-serif" font-size="11" fill="#78716c">intermediary pool, sweep tracking</text>
+
+  <rect x="590" y="232" width="250" height="50" fill="#ffffff" stroke="#d6d3d1" rx="4"/>
+  <text x="606" y="252" font-family="Menlo, monospace" font-size="13" font-weight="600" fill="#1c1917">Master_List</text>
+  <text x="606" y="269" font-family="Inter, sans-serif" font-size="11" fill="#78716c">one row per contributor</text>
+
+  <rect x="60" y="296" width="250" height="50" fill="#ffffff" stroke="#d6d3d1" rx="4"/>
+  <text x="76" y="316" font-family="Menlo, monospace" font-size="13" font-weight="600" fill="#1c1917">Distribution_List</text>
+  <text x="76" y="333" font-family="Inter, sans-serif" font-size="11" fill="#78716c">86 recipients + send status</text>
+
+  <rect x="325" y="296" width="250" height="50" fill="#ffffff" stroke="#d6d3d1" rx="4"/>
+  <text x="341" y="316" font-family="Menlo, monospace" font-size="13" font-weight="600" fill="#1c1917">Dashboard</text>
+  <text x="341" y="333" font-family="Inter, sans-serif" font-size="11" fill="#78716c">only place totals live</text>
+
+  <rect x="590" y="296" width="250" height="50" fill="#ffffff" stroke="#d6d3d1" rx="4"/>
+  <text x="606" y="316" font-family="Menlo, monospace" font-size="13" font-weight="600" fill="#1c1917">Audit_Log</text>
+  <text x="606" y="333" font-family="Inter, sans-serif" font-size="11" fill="#78716c">append-only change log</text>
+
+  <text x="450" y="376" font-family="Inter, sans-serif" font-size="11" fill="#92400e" text-anchor="middle" font-style="italic">All aggregations live only on Dashboard. No total row sits inside a data sheet.</text>
+  <text x="450" y="394" font-family="Inter, sans-serif" font-size="11" fill="#92400e" text-anchor="middle" font-style="italic">Bank sheets are touched only by bank PDFs. Screenshots update Master_List pending only.</text>
+
+  <line x1="250" y1="406" x2="250" y2="436" stroke="#57534e" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="650" y1="406" x2="650" y2="436" stroke="#57534e" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="40" y="446" width="820" height="80" fill="#fafaf9" stroke="#e7e5e4" rx="6"/>
+  <text x="60" y="468" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#78716c" letter-spacing="1">LAYER 3 — PUBLICATIONS (GENERATED, NEVER TYPED)</text>
+
+  <rect x="60" y="480" width="380" height="36" fill="#ffffff" stroke="#d6d3d1" rx="4"/>
+  <text x="76" y="502" font-family="Menlo, monospace" font-size="12" font-weight="600" fill="#1c1917">daily_updates/YYYYMMDD_update.md</text>
+
+  <rect x="460" y="480" width="380" height="36" fill="#ffffff" stroke="#d6d3d1" rx="4"/>
+  <text x="476" y="502" font-family="Menlo, monospace" font-size="12" font-weight="600" fill="#1c1917">archive/audit_&lt;timestamp&gt;.md</text>
+</svg>
